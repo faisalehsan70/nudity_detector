@@ -1,0 +1,17 @@
+language: python
+
+sudo: false
+
+python:
+    - 3.5
+    - 3.6
+
+install:
+    - pip install --upgrade tensorflow
+    - pip install --upgrade .
+
+script:
+    - cd tests && python tests.py
+
+notifications:
+    email: false
